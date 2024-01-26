@@ -156,7 +156,7 @@
 <body>
     <div id="content">
         <h2 class="text-center ">แบบฟอร์มสมัครงาน</h2>
-        <form id="signUpForm" action="#!">
+        <form id="signUpForm" action="#!" method="post" enctype="multipart/form-data">
             <!-- start step indicators -->
             <div class="form-header d-flex mb-4">
                 <span class="stepIndicator">Step 1</span>
@@ -410,6 +410,7 @@
                 </div>
                 <br>
 
+
             </div>
 
             <!-- step three --------------------------------------------------- -->
@@ -524,7 +525,7 @@
             <div class="step">
                 <p class="text-center mb-4">ข้อมูลประสบการณ์ทำงาน</p>
                 <div class="row">
-                <div class="mb-3 col-md-4 form-group">
+                    <div class="mb-3 col-md-4 form-group">
                         <label for="ex_company">สถานที่ทำงาน</label>
                         <input class="form-control" type="text" id="ex_company" name="ex_company">
                     </div>
@@ -570,57 +571,255 @@
 
             <!-- step six --------------------------------------------------- -->
             <div class="step">
-                <p class="text-center mb-4">Your presence on the social network</p>
-                <div class="mb-3">
-                    <input type="text" placeholder="Linked In" oninput="this.className = ''" name="linkedin">
+                <p class="text-center mb-4">ข้อมูลทักษะ</p>
+                <div class="row">
+                    <div class="mb-4 col-md-4 form-group">
+                        <label for="type_skill">ความสามารถพิมพ์ดีด</label>
+                        <select id="type_skill" class="form-control">
+                            <option selected>กรุณาเลือก...</option>
+                            <option>ได้</option>
+                            <option>ไม่ได้</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="type_th">ความเร็วการพิมพ์ภาษาไทย(คำ/นาที)</label>
+                        <input class="form-control" type="text" id="type_th" name="type_th">
+                    </div>
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="type_en">ความเร็วการพิมพ์ภาษาอังกฤษ(คำ/นาที)</label>
+                        <input class="form-control" type="text" id="type_en" name="type_en">
+                    </div>
+                    <div class="mb-4 col-md-4 form-group">
+                        <label for="com_skill">ทักษะทางคอมพิวเตอร์(หรือภาษาโปรแกรม)</label>
+                        <select id="com_skill" class="form-control">
+                            <option selected>กรุณาเลือก...</option>
+                            <option>ได้</option>
+                            <option>ไม่ได้</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="com_mention">ระบุทักษะทางคอมพิวเตอร์(หรือภาษาโปรแกรม) ถ้ามี</label>
+                        <input class="form-control" type="text" id="com_mention" name="com_mention">
+                    </div>
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="office_machine">เครื่องสำนักงาน</label>
+                        <input class="form-control" type="text" id="office_machine" name="office_machine">
+                    </div>
+                    <div class="mb-4 col-md-4 form-group">
+                        <label for="drive">ใบขับขี่</label>
+                        <select id="drive" class="form-control">
+                            <option selected>กรุณาเลือก...</option>
+                            <option>มี</option>
+                            <option>ไม่มี</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="drive_licence">หมายเลขใบขับขี่</label>
+                        <input class="form-control" type="text" id="drive_licence" name="drive_licence">
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <input type="text" placeholder="Twitter" oninput="this.className = ''" name="twitter">
+                <div class="row">
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="hobby">งานอดิเรก</label>
+                        <input class="form-control" type="text" id="hobby" name="hobby">
+                    </div>
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="special_know">กความรู้พิเศษ</label>
+                        <input class="form-control" type="text" id="special_know" name="special_know">
+                    </div>
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="other_skill">อื่น ๆ</label>
+                        <input class="form-control" type="text" id="other_skill" name="other_skill">
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <input type="text" placeholder="Facebook" oninput="this.className = ''" name="facebook">
+                <br>
+                <div class="row">
+                    <div class="mb-4 col-md-4 form-group">
+                        <label for="lang">ภาษา</label>
+                        <select id="lang" class="form-control">
+                            <option selected>กรุณาเลือก...</option>
+                            <option>ภาษาไทย</option>
+                            <option>ภาษาอังกฤษ</option>
+                        </select>
+                    </div>
+                    <div class="mb-4 col-md-8 form-group">
+                        <div class="form-check form-check-inline"><br>
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="speaking" value="1"><br>
+                            <label class="form-check-label" for="speaking">ดี</label>
+                        </div>
+                        <div class="form-check form-check-inline"><br>
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="speaking" value="2"><br>
+                            <label class="form-check-label" for="speaking">ปานกลาง</label>
+                        </div>
+                        <div class="form-check form-check-inline"><br>
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="speaking" value="3"><br>
+                            <label class="form-check-label" for="speaking">พอใช้</label>
+                        </div>
+                    </div>
                 </div>
+                <br>
             </div>
 
             <!-- step seven --------------------------------------------------- -->
             <div class="step">
-                <p class="text-center mb-4">Create your account</p>
-                <div class="mb-3">
-                    <input type="email" placeholder="Email Address" oninput="this.className = ''" name="email">
+                <p class="text-center mb-4">ข้อมูลอื่นๆ</p>
+                <div class="row">
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="eme_name">ชื่อ-สกุล ผู้ติดต่อฉุกเฉิน</label>
+                        <input class="form-control" type="text" id="eme_name" name="eme_name">
+                    </div>
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="eme_tel">เบอร์ติดต่อ</label>
+                        <input class="form-control" type="text" id="eme_tel" name="eme_tel">
+                    </div>
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="eme_relate">เกี่ยวข้องกับผู้สมัคร</label>
+                        <input class="form-control" type="text" id="eme_relate" name="eme_relate">
+                    </div>
+                    <div class="mb-4 col-md-4 form-group">
+                        <label for="eme_province">จังหวัด</label>
+                        <select id="eme_province" class="form-control">
+                            <option selected>กรุณาเลือก...</option>
+                            <option>ปัตตานี</option>
+                            <option>ยะลา</option>
+                            <option>นราธิวาส</option>
+                            <option>สงขลา</option>
+                            <option>สตูล</option>
+                        </select>
+                    </div>
+                    <div class="mb-4 col-md-4 form-group">
+                        <label for="eme_district">อำเภอ</label>
+                        <select id="eme_district" class="form-control">
+                            <option selected>กรุณาเลือก...</option>
+                            <option>เมืองยะลา</option>
+                            <option>รามัน</option>
+                            <option>ยะหา</option>
+                            <option>บันนังสตา</option>
+                            <option>ธารโต</option>
+                            <option>เบตง</option>
+                            <option>กาบัง</option>
+                            <option>กรงปินัง</option>
+                        </select>
+                    </div>
+                    <div class="mb-4 col-md-4 form-group">
+                        <label for="work_up">สามารถปฏิบัติงานนอกสถานที่</label>
+                        <select id="work_up" class="form-control">
+                            <option selected>กรุณาเลือก...</option>
+                            <option>ได้</option>
+                            <option>ไม่ได้</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <input type="password" placeholder="Password" oninput="this.className = ''" name="password">
+                <div class="row">
+                    <div class="mb-3 col-md-3 form-group"><br>
+                        <label for="source">ทราบข่าวสารการรับสมัครจาก</label>
+                    </div>
+                    <div class="mb-3 col-md-9 form-group">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="source1" value="Facebook">
+                            <label class="form-check-label" for="source1">Facebook</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="source2" value="Website">
+                            <label class="form-check-label" for="source2">Website</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="source3" value="เพื่อน">
+                            <label class="form-check-label" for="source3">เพื่อน</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="source4" value="สถานศึกษา">
+                            <label class="form-check-label" for="source4">สถานศึกษา</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <input type="password" placeholder="Confirm Password" oninput="this.className = ''" name="password">
+                <div class="row">
+                    <div class="mb-4 col-md-4 form-group">
+                        <label for="applied">เคยสมัครงานที่นี่มาก่อนหรือไม่</label>
+                        <select id="applied" class="form-control">
+                            <option selected>กรุณาเลือก...</option>
+                            <option>เคย</option>
+                            <option>ไม่เคย</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="applied _when">ถ้าเคย เมื่อไหร่</label>
+                        <input class="form-control" type="text" id="applied _when" name="applied _when">
+                    </div>
+                    <div class="mb-4 col-md-4 form-group">
+                        <label for="friend">ญาติหรือคนรู้จักที่ทำงานที่นี่</label>
+                        <input class="form-control" type="text" id="friend" name="friend">
+                    </div>
+                    <div class="mb-4 col-md-4 form-group">
+                        <label for="disease">เคยป่วยหนักหรือเป็นโรคติดต่อหรือไม่</label>
+                        <select id="disease" class="form-control">
+                            <option selected>กรุณาเลือก...</option>
+                            <option>เคย</option>
+                            <option>ไม่เคย</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-md-4 form-group">
+                        <label for="disease_name">ถ้าเคย ระบุชื่อโรค</label>
+                        <input class="form-control" type="text" id="disease_name" name="disease_name">
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="mb-3 col-md-12 form-group">
+                        <label for="yourself">แนะนำตัวเอง</label>
+                        <textarea class="form-control" type="text" id="yourself" name="yourself"></textarea>
+                    </div>
+                </div>
+                <br>
             </div>
 
             <!-- step eight --------------------------------------------------- -->
             <div class="step">
-                <p class="text-center mb-4">Your presence on the social network</p>
-                <div class="mb-3">
-                    <input type="text" placeholder="Linked In" oninput="this.className = ''" name="linkedin">
+                <p class="text-center mb-4">ข้อมูลไฟล์</p>
+                <div class="row">
+                    <div class="mb-3 form-group">
+                        <label for="picFile" class="form-label">รูปถ่ายหน้าตรง</label>
+                        <input class="form-control-lg" type="file" id="picFile">
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <input type="text" placeholder="Twitter" oninput="this.className = ''" name="twitter">
+                <div class="row">
+                    <div class="mb-3 form-group">
+                        <label for="resuFile" class="form-label">เรซูเม่</label>
+                        <input class="form-control-lg" type="file" id="resuFile">
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <input type="text" placeholder="Facebook" oninput="this.className = ''" name="facebook">
+                <div class="row">
+                    <div class="mb-3 form-group">
+                        <label for="transFile" class="form-label">ทราสคริปต์</label>
+                        <input class="form-control-lg" type="file" id="transFile">
+                    </div>
                 </div>
+                <br>
             </div>
 
             <!-- step nine --------------------------------------------------- -->
             <div class="step">
                 <p class="text-center mb-4">We will never sell it</p>
-                <div class="mb-3">
-                    <input type="text" placeholder="Full name" oninput="this.className = ''" name="fullname">
+                <div class="row">
+                    <p>levntcmei.xlejlsncrhe xrmkchkj.efxsk.lfifjgoiryg[or;lvmcxbfjlbjjgoireugoirogdlkf.,vmx/vk'.fop.wpoemsfcn, msdnv cxmv/;vo'pofivew,[g,i
+                        levntcmei.xlejlsncrhe xrmkchkj.efxsk.lfifjgoiryg[or;lvmcxbfjlbjjgoireugoirogdlkf.,vmx/vk'.fop.wpoemsfcn, msdnv cxmv/;vo'pofivew,[g,i
+                        eoicwumeilgver,l;gkerlgv
+                        eoiglevrnyiguklmcrjlwx,oprecgp
+                        otumcoewilu,pewx;fiopc
+                        wcmprwm,xrpo,poe,piceopiepefoi,f]
+                    </p>
                 </div>
-                <div class="mb-3">
-                    <input type="text" placeholder="Mobile" oninput="this.className = ''" name="mobile">
-                </div>
-                <div class="mb-3">
-                    <input type="text" placeholder="Address" oninput="this.className = ''" name="address">
+                <br>
+                <div class="row">
+                    <div class="mb-3 col-md-1 form-group">
+                        <div class="form-check form-check-inline" style="padding-left: 70px;">
+                            <input class="form-check-input" type="checkbox" id="source1" value="1">
+                        </div>
+                    </div>
+                    <div class="mb-3 col-md-3 form-group">
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="source1" valid>ยอมรับ</label>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -640,6 +839,22 @@
 
 </body>
 
+<!-- <script>
+    $(document).ready(function() {
+        let i = 1;
+        $('#add1').click(function() {
+            i++;
+            $('#dynamic_field1').append(' <div class="row"><div class="mb-3 col-md-4 form-group"><label for="maried_name">ชื่อ-สกุล คู่สมรส</label><input class="form-control" type="text" id="maried_name" name="maried_name"></div><div class="mb-3 col-md-4 form-group"><label for="maried_job">อาชีพ</label><input class="form-control" type="text" id="maried_job" name="maried_job"></div><div class="mb-3 col-md-4 form-group"><label for="maried_place">สถานที่ทำงาน</label><input class="form-control" type="text" id="maried_place" name="maried_place"></div><div class="mb-3 col-md-4 form-group"><label for="child">จำนวนบุตร</label><input class="form-control" type="number" id="child" name="child"></div><div class="mb-3 col-md-4"><button type="button" name="remove1" id="' + i + '" class="btn btn-danger btn_remove1"> X </button></div></div><br>')
+            document.getElementById("fam_num").value = i;
+        })
+        $(document).on('click', '.btn_remove1', function() {
+            let button_id1 = $(this).attr('id');
+            $('#row' + button_id1 + '').remove();
+            i--;
+            document.getElementById("fam_num").value = i;
+        })
+    })
+</script> -->
 <script>
     // Multiple step form
     var currentTab = 0; // Current tab is set to be the first tab (0)        
