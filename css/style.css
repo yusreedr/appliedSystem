@@ -1,0 +1,267 @@
+body {
+  /* background-image: url("images/wallpaperAnime.jpg"); */
+  /* background-attachment: fixed; */
+  /* background-size: 100% 100%; */
+  background-color: #ffffff;
+  font-family: 'Arial', sans-serif;
+
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+.btt-box {
+  height: 100px;
+  width: 100px;
+  background-color: #4B2399;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 0 4px 6px #000000;
+}
+
+.btn-box:hover {
+  background-color: #40198e;
+  border-color: #40198e;
+  color: #eee;
+}
+
+/* button {
+    height: 90px;
+    width: 100%;
+    font-size: 8px;
+} */
+
+.btt {
+  /* background-color: darkcyan; */
+  padding: 10px;
+}
+
+.btt-radius {
+  border-radius: 15px;
+}
+
+.btt-index {
+  height: 20px;
+  width: 20px;
+}
+
+.centers {
+  text-align: center;
+  color: #111;
+}
+
+.btn-color {
+  background-color: #4B2399;
+  border-color: #4B2399;
+  color: #fff;
+  font-size: 12px;
+}
+
+.btn-color:hover {
+  background-color: #40198e;
+  border-color: #40198e;
+  color: #eee;
+}
+
+option{
+  color: grey;
+}
+::placeholder{
+  color: grey;
+}
+
+.navbar {
+  background-color: #fff;
+  color: #4B2399;
+  box-shadow: 0 4px 6px #4b2399;
+  height: 50px;
+}
+
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+
+.pad-left {
+  margin-left: 220px
+}
+
+#sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 50;
+  left: 0px;
+  background-color: #4B2399;
+  padding-top: 90px;
+  padding-left: 20px;
+  color: white;
+  transition: 0.5s;
+}
+
+#sidebar a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  margin-bottom: 25px;
+}
+
+#navbar-toggler {
+  cursor: pointer;
+}
+
+#content {
+  margin-left: 220px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+
+/* Multiple step form  */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#signUpForm {
+  max-width: 1200px;
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 40px;
+  box-shadow: 0px 6px 18px rgb(0 0 0 / 9%);
+  border-radius: 12px;
+}
+
+#signUpForm .form-header {
+  gap: 5px;
+  text-align: center;
+  font-size: .9em;
+}
+
+#signUpForm .form-header .stepIndicator {
+  position: relative;
+  flex: 1;
+  padding-bottom: 30px;
+}
+
+#signUpForm .form-header .stepIndicator.active {
+  font-weight: 600;
+}
+
+#signUpForm .form-header .stepIndicator.finish {
+  font-weight: 600;
+  color: #660096;
+}
+
+#signUpForm .form-header .stepIndicator::before {
+  color: #660096;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 9;
+  width: 20px;
+  height: 20px;
+  background-color: #e1d5ef;
+  border-radius: 50%;
+  border: 3px solid #f0ecf5;
+}
+
+#signUpForm .form-header .stepIndicator.active::before {
+  background-color: #e1d5ef;
+  border: 3px solid #f0ecf5;
+}
+
+#signUpForm .form-header .stepIndicator.finish::before {
+  background-color: #660096;
+  border: 3px solid #cab7e1;
+}
+
+#signUpForm .form-header .stepIndicator::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  width: 100%;
+  height: 3px;
+  background-color: #f3f3f3;
+}
+
+#signUpForm .form-header .stepIndicator.active::after {
+  background-color: #cfa7ed;
+}
+
+#signUpForm .form-header .stepIndicator.finish::after {
+  background-color: #4B2399;
+}
+
+#signUpForm .form-header .stepIndicator:last-child:after {
+  display: none;
+}
+
+.stepIndicator {
+  font-size: 11px;
+}
+
+#signUpForm input {
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 1em;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+}
+
+#signUpForm input:focus {
+  border: 1px solid #4B2399;
+  outline: 0;
+}
+
+#signUpForm input.invalid {
+  border: 1px solid #ffaba5;
+}
+
+#signUpForm .step {
+  display: none;
+}
+
+#signUpForm .form-footer {
+  overflow: auto;
+  gap: 20px;
+}
+
+#signUpForm .form-footer button {
+  background-color: #734fbc;
+  border: 1px solid #4B2399 !important;
+  color: #ffffff;
+  border: none;
+  padding: 13px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  flex: 1;
+  margin-top: 5px;
+}
+
+#signUpForm .form-footer button:hover {
+  opacity: 0.8;
+}
+
+#signUpForm .form-footer #prevBtn {
+  background-color: #fff;
+  color: #4B2399;
+}
