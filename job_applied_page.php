@@ -17,7 +17,7 @@
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <style>
+    <!-- <style>
         body {
             font-family: 'Open Sans', sans-serif;
         }
@@ -150,7 +150,7 @@
             background-color: #fff;
             color: #4B2399;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -390,27 +390,27 @@
                     </div>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="maried_name">ชื่อ-สกุล คู่สมรส</label>
-                        <input class="form-control" type="text" id="maried_name" name="maried_name">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="maried_job">อาชีพ</label>
-                        <input class="form-control" type="text" id="maried_job" name="maried_job">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="maried_place">สถานที่ทำงาน</label>
-                        <input class="form-control" type="text" id="maried_place" name="maried_place">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="child">จำนวนบุตร</label>
-                        <input class="form-control" type="number" id="child" name="child">
+                <div id="maried" style="display: none;">
+                    <div class="row">
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="maried_name">ชื่อ-สกุล คู่สมรส</label>
+                            <input class="form-control" type="text" id="maried_name" name="maried_name">
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="maried_job">อาชีพ</label>
+                            <input class="form-control" type="text" id="maried_job" name="maried_job">
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="maried_place">สถานที่ทำงาน</label>
+                            <input class="form-control" type="text" id="maried_place" name="maried_place">
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="child">จำนวนบุตร</label>
+                            <input class="form-control" type="number" id="child" name="child">
+                        </div>
                     </div>
                 </div>
                 <br>
-
-
             </div>
 
             <!-- step three --------------------------------------------------- -->
@@ -464,18 +464,25 @@
                     </div>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="fam_name">ชื่อ-สกุล</label>
-                        <input class="form-control" type="text" id="fam_name" name="fam_name">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="fam_age">อายุ</label>
-                        <input class="form-control" type="text" id="fam_age" name="fam_age">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="fam_job">อาชีพ</label>
-                        <input class="form-control" type="text" id="fam_job" name="fam_job">
+                <!-- <h4>ข้อมูลพี่น้อง</h4><br> -->
+                <p class="text-center mb-4">ข้อมูลพี่น้อง</p>
+                <div id="fam">
+                    <div class="row">
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="fam_name">ชื่อ-สกุล</label>
+                            <input class="form-control" type="text" id="fam_name" name="fam_name">
+                        </div>
+                        <div class="mb-3 col-md-3 form-group">
+                            <label for="fam_age">อายุ</label>
+                            <input class="form-control" type="text" id="fam_age" name="fam_age">
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="fam_job">อาชีพ</label>
+                            <input class="form-control" type="text" id="fam_job" name="fam_job">
+                        </div>
+                        <div class="mb-3 col-md-1"><br>
+                            <button type="button" class="btn btn-success" id="add1">Add more</button>
+                        </div>
                     </div>
                 </div>
                 <br>
@@ -484,38 +491,43 @@
             <!-- step four --------------------------------------------------- -->
             <div class="step">
                 <p class="text-center mb-4">ข้อมูลการศึกษา</p>
-                <div class="row">
-                    <div class="mb-4 col-md-4 form-group">
-                        <label for="edu_level">ระดับการศึกษา</label>
-                        <select id="edu_level" class="form-control">
-                            <option selected>กรุณาเลือก...</option>
-                            <option>มัธยมศึกษาตอนปลาย</option>
-                            <option>ปวช.</option>
-                            <option>ปวท./ปวส.</option>
-                            <option>ปริญญาตรี</option>
-                            <option>ปริญญาโท</option>
-                            <option>ปริญญาเอก</option>
-                        </select>
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="edu_school">สถานศึกษา</label>
-                        <input class="form-control" type="text" id="fam_age" name="fam_age">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="edu_major">สาขา</label>
-                        <input class="form-control" type="text" id="fam_job" name="fam_job">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="edu_begin">ปีที่เริ่มเรียน</label>
-                        <input class="form-control" type="text" id="fam_name" name="fam_name">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="edu_end">ปีที่จบ</label>
-                        <input class="form-control" type="text" id="fam_age" name="fam_age">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="edu_grade">ผลการเรียน</label>
-                        <input class="form-control" type="text" id="fam_job" name="fam_job">
+                <div id="edu">
+                    <div class="row">
+                        <div class="mb-4 col-md-4 form-group">
+                            <label for="edu_level">ระดับการศึกษา</label>
+                            <select id="edu_level" class="form-control">
+                                <option selected>กรุณาเลือก...</option>
+                                <option>มัธยมศึกษาตอนปลาย</option>
+                                <option>ปวช.</option>
+                                <option>ปวท./ปวส.</option>
+                                <option>ปริญญาตรี</option>
+                                <option>ปริญญาโท</option>
+                                <option>ปริญญาเอก</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="edu_school">สถานศึกษา</label>
+                            <input class="form-control" type="text" id="fam_age" name="fam_age">
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="edu_major">สาขา</label>
+                            <input class="form-control" type="text" id="fam_job" name="fam_job">
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="edu_begin">ปีที่เริ่มเรียน</label>
+                            <input class="form-control" type="text" id="fam_name" name="fam_name">
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="edu_end">ปีที่จบ</label>
+                            <input class="form-control" type="text" id="fam_age" name="fam_age">
+                        </div>
+                        <div class="mb-3 col-md-3 form-group">
+                            <label for="edu_grade">ผลการเรียน</label>
+                            <input class="form-control" type="text" id="fam_job" name="fam_job">
+                        </div>
+                        <div class="mb-3 col-md-1"><br>
+                            <button type="button" class="btn btn-success" id="add2">Add more</button>
+                        </div>
                     </div>
                 </div>
                 <br>
@@ -524,49 +536,56 @@
             <!-- step five --------------------------------------------------- -->
             <div class="step">
                 <p class="text-center mb-4">ข้อมูลประสบการณ์ทำงาน</p>
-                <div class="row">
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="ex_company">สถานที่ทำงาน</label>
-                        <input class="form-control" type="text" id="ex_company" name="ex_company">
+                <div id="exp">
+                    <div class="row">
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="ex_company">สถานที่ทำงาน</label>
+                            <input class="form-control" type="text" id="ex_company" name="ex_company">
+                        </div>
+                        <div class="mb-4 col-md-4 form-group">
+                            <label for="ex_province">จังหวัด</label>
+                            <select id="ex_province" class="form-control">
+                                <option selected>กรุณาเลือก...</option>
+                                <option>ปัตตานี</option>
+                                <option>ยะลา</option>
+                                <option>นราธิวาส</option>
+                                <option>สงขลา</option>
+                                <option>สตูล</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="ex_pos">ตำแหน่งงาน</label>
+                            <input class="form-control" type="text" id="ex_pos" name="ex_pos">
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="ex_des">ลักษณะงาน</label>
+                            <input class="form-control" type="text" id="ex_des" name="ex_des">
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="ex_begin">ปีที่เริ่มทำงาน</label>
+                            <input class="form-control" type="text" id="ex_begin" name="ex_begin">
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="ex_end">ปีที่สิ้นสุด</label>
+                            <input class="form-control" type="text" id="ex_end" name="ex_end">
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="ex_salary">ค่าจ้าง</label>
+                            <input class="form-control" type="text" id="ex_salary" name="ex_salary">
+                        </div>
+                        <div class="mb-3 col-md-4 form-group">
+                            <label for="ex_reason">เหตุผลที่ออก</label>
+                            <input class="form-control" type="text" id="ex_reason" name="ex_reason">
+                        </div>
+                        <div class="mb-3 col-md-3">
+                        </div>
+                        <div class="mb-3 col-md-1"><br>
+                            <button type="button" class="btn btn-success" id="add3">Add more</button>
+                        </div>
                     </div>
-                    <div class="mb-4 col-md-4 form-group">
-                        <label for="ex_province">จังหวัด</label>
-                        <select id="ex_province" class="form-control">
-                            <option selected>กรุณาเลือก...</option>
-                            <option>ปัตตานี</option>
-                            <option>ยะลา</option>
-                            <option>นราธิวาส</option>
-                            <option>สงขลา</option>
-                            <option>สตูล</option>
-                        </select>
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="ex_pos">ตำแหน่งงาน</label>
-                        <input class="form-control" type="text" id="ex_pos" name="ex_pos">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="ex_des">ลักษณะงาน</label>
-                        <input class="form-control" type="text" id="ex_des" name="ex_des">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="ex_begin">ปีที่เริ่มทำงาน</label>
-                        <input class="form-control" type="text" id="ex_begin" name="ex_begin">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="ex_end">ปีที่สิ้นสุด</label>
-                        <input class="form-control" type="text" id="ex_end" name="ex_end">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="ex_salary">ค่าจ้าง</label>
-                        <input class="form-control" type="text" id="ex_salary" name="ex_salary">
-                    </div>
-                    <div class="mb-3 col-md-4 form-group">
-                        <label for="ex_reason">เหตุผลที่ออก</label>
-                        <input class="form-control" type="text" id="ex_reason" name="ex_reason">
-                    </div>
-
                 </div>
                 <br>
+
             </div>
 
             <!-- step six --------------------------------------------------- -->
@@ -633,31 +652,43 @@
                     </div>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="mb-4 col-md-4 form-group">
-                        <label for="lang">ภาษา</label>
-                        <select id="lang" class="form-control">
-                            <option selected>กรุณาเลือก...</option>
-                            <option>ภาษาไทย</option>
-                            <option>ภาษาอังกฤษ</option>
-                        </select>
-                    </div>
-                    <div class="mb-4 col-md-8 form-group">
-                        <div class="form-check form-check-inline"><br>
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="speaking" value="1"><br>
-                            <label class="form-check-label" for="speaking">ดี</label>
+                <div id="lang">
+                    <div class="row">
+                        <div class="mb-4 col-md-4 form-group">
+                            <label for="lang">ภาษา</label>
+                            <select id="lang" class="form-control">
+                                <option selected>กรุณาเลือก...</option>
+                                <option>ภาษาไทย</option>
+                                <option>ภาษาอังกฤษ</option>
+                            </select>
                         </div>
-                        <div class="form-check form-check-inline"><br>
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="speaking" value="2"><br>
-                            <label class="form-check-label" for="speaking">ปานกลาง</label>
+                        <div class="mb-4 col-md-7 form-group">
+                            <div class="form-check form-check-inline"><br>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="speaking" value="1"><br>
+                                <label class="form-check-label" for="speaking">ดี</label>
+                            </div>
+                            <div class="form-check form-check-inline"><br>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="speaking" value="2"><br>
+                                <label class="form-check-label" for="speaking">ปานกลาง</label>
+                            </div>
+                            <div class="form-check form-check-inline"><br>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="speaking" value="3"><br>
+                                <label class="form-check-label" for="speaking">พอใช้</label>
+                            </div>
                         </div>
-                        <div class="form-check form-check-inline"><br>
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="speaking" value="3"><br>
-                            <label class="form-check-label" for="speaking">พอใช้</label>
+                        <div class="mb-3 col-md-1"><br><br>
+                            <button type="button" class="btn btn-success" id="add4">Add more</button>
                         </div>
                     </div>
                 </div>
                 <br>
+                <!-- <div class="row">
+                    <div class="mb-3 col-md-4 form-group">
+                        <button type="button" class="btn btn-success" onclick="addForm()">Add 4</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteForm()">Delete 4</button>
+                    </div>
+                </div>
+                <br> -->
             </div>
 
             <!-- step seven --------------------------------------------------- -->
@@ -855,6 +886,82 @@
         })
     })
 </script> -->
+<!-- <script>
+    $(document).ready(function(){
+        var i = 1;
+        $('#add').click(function(){
+i++;
+$('#dynamic_field').append('<div id="fam"><div class="row"><div class="mb-3 col-md-4 form-group"><label for="fam_name">ชื่อ-สกุล</label><input class="form-control" type="text" id="fam_name" name="fam_name"></div><div class="mb-3 col-md-3 form-group"><label for="fam_age">อายุ</label><input class="form-control" type="text" id="fam_age" name="fam_age"></div><div class="mb-3 col-md-4 form-group"><label for="fam_job">อาชีพ</label><input class="form-control" type="text" id="fam_job" name="fam_job"></div><div class="mb-3 col-md-1"><br><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></div></div></div><br>')
+        });
+        $(document).on('click', '.btn_remove', function(){
+            var button_id = $(this).attr("id");
+            $("#row"+button_id+'').remove1();
+        });
+    });
+</script> -->
+<script>
+    // Dinamic 1
+    $(document).ready(function() {
+        var i1 = 1;
+        $('#add1').click(function() {
+            i1++;
+            $('#fam').append('<div class="row" id="row' + i1 + '"><div class="mb-3 col-md-4 form-group"><label for="fam_name">ชื่อ-สกุล</label><input class="form-control" type="text" id="fam_name" name="fam_name"></div><div class="mb-3 col-md-3 form-group"><label for="fam_age">อายุ</label><input class="form-control" type="text" id="fam_age" name="fam_age"></div><div class="mb-3 col-md-4 form-group"><label for="fam_job">อาชีพ</label><input class="form-control" type="text" id="fam_job" name="fam_job"></div><div class="mb-3 col-md-1"><br><button type="button" name="remove" id="' + i1 + '" class="btn btn-danger btn_remove1">X</button></div></div>')
+        });
+        $(document).on('click', '.btn_remove1', function() {
+            var button_id1 = $(this).attr("id");
+            $("#row" + button_id1).remove();
+        });
+    });
+
+    // Dinamic 2
+    $(document).ready(function() {
+        var i2 = 1;
+        $('#add2').click(function() {
+            i2++;
+            $('#edu').append('<div class="row" id="row' + i2 + '"><hr><div class="mb-4 col-md-4 form-group"><label for="edu_level">ระดับการศึกษา</label><select id="edu_level" class="form-control"><option selected>กรุณาเลือก...</option><option>มัธยมศึกษาตอนปลาย</option><option>ปวช.</option><option>ปวท./ปวส.</option><option>ปริญญาตรี</option><option>ปริญญาโท</option><option>ปริญญาเอก</option></select></div><div class="mb-3 col-md-4 form-group"><label for="edu_school">สถานศึกษา</label><input class="form-control" type="text" id="fam_age" name="fam_age"></div><div class="mb-3 col-md-4 form-group"><label for="edu_major">สาขา</label><input class="form-control" type="text" id="fam_job" name="fam_job"></div><div class="mb-3 col-md-4 form-group"><label for="edu_begin">ปีที่เริ่มเรียน</label><input class="form-control" type="text" id="fam_name" name="fam_name"></div><div class="mb-3 col-md-4 form-group"><label for="edu_end">ปีที่จบ</label><input class="form-control" type="text" id="fam_age" name="fam_age"></div><div class="mb-3 col-md-3 form-group"><label for="edu_grade">ผลการเรียน</label><input class="form-control" type="text" id="fam_job" name="fam_job"></div><div class="mb-3 col-md-1"><br><button type="button" name="remove" id="' + i2 + '" class="btn btn-danger btn_remove2">X</button></div></div>')
+        });
+        $(document).on('click', '.btn_remove2', function() {
+            var button_id2 = $(this).attr("id");
+            $("#row" + button_id2).remove();
+        });
+    });
+
+    // Dinamic 3
+    $(document).ready(function() {
+        var i3 = 1;
+        $('#add3').click(function() {
+            i3++;
+            $('#exp').append('<div class="row" id="row' + i3 + '"><hr><div class="mb-3 col-md-4 form-group"><label for="ex_company">สถานที่ทำงาน</label><input class="form-control" type="text" id="ex_company" name="ex_company"></div><div class="mb-4 col-md-4 form-group"><label for="ex_province">จังหวัด</label><select id="ex_province" class="form-control"><option selected>กรุณาเลือก...</option><option>ปัตตานี</option><option>ยะลา</option><option>นราธิวาส</option><option>สงขลา</option><option>สตูล</option></select></div><div class="mb-3 col-md-4 form-group"><label for="ex_pos">ตำแหน่งงาน</label><input class="form-control" type="text" id="ex_pos" name="ex_pos"></div><div class="mb-3 col-md-4 form-group"><label for="ex_des">ลักษณะงาน</label><input class="form-control" type="text" id="ex_des" name="ex_des"></div><div class="mb-3 col-md-4 form-group"><label for="ex_begin">ปีที่เริ่มทำงาน</label><input class="form-control" type="text" id="ex_begin" name="ex_begin"></div><div class="mb-3 col-md-4 form-group"><label for="ex_end">ปีที่สิ้นสุด</label><input class="form-control" type="text" id="ex_end" name="ex_end"></div><div class="mb-3 col-md-4 form-group"><label for="ex_salary">ค่าจ้าง</label><input class="form-control" type="text" id="ex_salary" name="ex_salary"></div><div class="mb-3 col-md-4 form-group"><label for="ex_reason">เหตุผลที่ออก</label><input class="form-control" type="text" id="ex_reason" name="ex_reason"></div><div class="mb-3 col-md-3"></div><div class="mb-3 col-md-1"><br><button type="button" name="remove" id="' + i3 + '" class="btn btn-danger btn_remove3">X</button></div></div>')
+        });
+        $(document).on('click', '.btn_remove3', function() {
+            var button_id3 = $(this).attr("id");
+            $("#row" + button_id3).remove();
+        });
+    });
+
+    // Dinamic 4
+    $(document).ready(function() {
+        var i4 = 1;
+        $('#add4').click(function() {
+            i4++;
+            $('#lang').append('<div class="row" id="row' + i4 + '"><hr><div class="mb-4 col-md-4 form-group"><label for="lang">ภาษา</label><select id="lang" class="form-control"><option selected>กรุณาเลือก...</option><option>ภาษาไทย</option><option>ภาษาอังกฤษ</option></select></div><div class="mb-4 col-md-7 form-group"><div class="form-check form-check-inline"><br><input class="form-check-input" type="radio" name="inlineRadioOptions" id="speaking" value="1"><br><label class="form-check-label" for="speaking">ดี</label></div><div class="form-check form-check-inline"><br><input class="form-check-input" type="radio" name="inlineRadioOptions" id="speaking" value="2"><br><label class="form-check-label" for="speaking">ปานกลาง</label></div><div class="form-check form-check-inline"><br><input class="form-check-input" type="radio" name="inlineRadioOptions" id="speaking" value="3"><br><label class="form-check-label" for="speaking">พอใช้</label></div></div><div class="mb-3 col-md-1"><br><br><button type="button" name="remove" id="' + i4 + '" class="btn btn-danger btn_remove4">X</button></div></div>')
+        });
+        $(document).on('click', '.btn_remove4', function() {
+            var button_id4 = $(this).attr("id");
+            $("#row" + button_id4).remove();
+        });
+    });
+</script>
+<script>
+    document.getElementById("marital_status").addEventListener("change", function() {
+        var maried = document.getElementById("maried");
+        if (this.value === "สมรส") {
+            maried.style.display = "block";
+        } else {
+            maried.style.display = "none";
+        }
+    });
+</script>
 <script>
     // Multiple step form
     var currentTab = 0; // Current tab is set to be the first tab (0)        
